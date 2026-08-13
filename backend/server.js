@@ -13,7 +13,7 @@ import nodoRoutes from './src/routes/nodoRoutes.js';
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:3000', 
+  origin: 'ahorrosurtido.vercel.app', 
   credentials: true
 }));
 
