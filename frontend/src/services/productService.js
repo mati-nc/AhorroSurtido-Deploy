@@ -1,15 +1,13 @@
 import axios from "axios";
 
-// Configuración base del endpoint Productos
-const API_URL = "http://localhost:5100/productos";
-
+// URL base del backend
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5100";
 
 // Obtener catálogo completo de productos
 export const getProducts = async () => {
-    const response = await axios.get(API_URL);
+    const response = await axios.get(`${API_URL}/productos`);
     return response.data;
 };
-
 
 // Crear un nuevo producto (Backend listo)
 // Implementar cuando se conecte el formulario
