@@ -1,11 +1,10 @@
-// URL base del backend
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5100";
 
 export const authService = {
 
   // Iniciar sesión
   login: async (credenciales) => {
-    const respuesta = await fetch(`${API_URL}/auth/login`, {
+    const respuesta = await fetch(`${API_URL}/api/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -23,7 +22,7 @@ export const authService = {
 
   // Registrar usuario
   register: async (datosUsuario) => {
-    const respuesta = await fetch(`${API_URL}/auth/register`, {
+    const respuesta = await fetch(`${API_URL}/api/auth/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
