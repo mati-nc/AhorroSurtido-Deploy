@@ -13,7 +13,7 @@ import nodoRoutes from './src/routes/nodoRoutes.js';
 const app = express();
 
 app.use(cors({
-  origin: 'ahorrosurtido.vercel.app', 
+  origin: 'https://ahorrosurtido.vercel.app', 
   credentials: true
 }));
 
